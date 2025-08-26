@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ErrorMessage from "../components/ErrorMessage";
 import Movie from "../components/Movie";
 import { useSearchParams } from "react-router";
 import Pagination from "../components/Pagination";
+import { ThemeContext } from "../contexts/ThemeContext";
 const api_key = "b0aefd2c1a775619f9d05eaebc2f45b1";
 const language = "tr-TR";
 const page = 1;
@@ -13,6 +14,7 @@ const SearchResults = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [totalPages, setTotalPages] = useState(0);
   const [page, setPage] = useState(1);
+  const { theme } = useContext(ThemeContext);
 
   const query = searchParams.get("query");
   console.log("query:", query);
@@ -60,7 +62,7 @@ const SearchResults = () => {
   if (errorMessage) return <ErrorMessage message={errorMessage} />;
   return (
     <div className="my-3 container">
-      <div className="card">
+      <div className={`card bg-${theme} text-${theme === "dark" ? "light" : "dark"}`}>
         <div className="card-header d-flex align-items-center gap-2">
           <i className="bi bi-film"></i>
           <h2 className="title h3 mb-0">Arama Sonuçları {query}</h2>
