@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const API_KEY = "b0aefd2c1a775619f9d05eaebc2f45b1"; // Replace with your TMDB API key

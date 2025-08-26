@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import ErrorMessage from "../components/ErrorMessage";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router-dom";
 import SimilarMovies from "./SimilarComponents";
+import ActorCard from "../components/ActorCard";
 import SimilarComponents from "./SimilarComponents";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { UserContext } from "../contexts/UserContext";
@@ -19,7 +20,6 @@ const MovieDetails = ({ type }) => {
     useContext(UserContext);
 
   const isAddedToList = watchList?.some((u) => u.id === movie?.id);
-  console.log(isAddedToList);
   useEffect(() => {
     async function GetMovieDetails() {
       try {
@@ -40,7 +40,6 @@ const MovieDetails = ({ type }) => {
         }
 
         const data = await response.json();
-        console.log(data);
         if (data) {
           setMovie(data);
         }
@@ -178,20 +177,21 @@ const MovieDetails = ({ type }) => {
             </div>
             <div className={`card-body bg-${theme}`}>
               <div className="row">
-                {movie.credits.cast.slice(0, 12).map((actor) => (
-                  <div className="col-md-2" key={actor.id}>
-                    <img
-                      src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}
-                      alt={actor.name}
-                      className="img-fluid rounded"
-                    />
-                    <p
-                      className={`text-${theme === "dark" ? "light" : "dark"}`}
-                    >
-                      {actor.name}
-                    </p>
-                  </div>
-                ))}
+                {movie.credits?.cast && movie.credits.cast.length > 0 ? (
+                  movie.credits.cast
+                    .slice(0, 12)
+                    .map((actor, index) => (
+                      <ActorCard
+                        key={`${actor.id}-${index}`}
+                        actor={actor}
+                        theme={theme}
+                      />
+                    ))
+                ) : (
+                  <p className={`text-${theme === "dark" ? "light" : "dark"}`}>
+                    Oyuncu bilgisi bulunamadı.
+                  </p>
+                )}
               </div>
             </div>
           </div>
