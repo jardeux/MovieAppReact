@@ -1,0 +1,42 @@
+export const movieList = [
+  {
+    id: 1,
+    title: "Kaptan Amerika",
+    image: "1.jpg",
+    description: "Güzel bir film",
+    is_active: false,
+    is_new: true,
+  },
+  {
+    id: 2,
+    title: "Araba Hırsızları",
+    image: "2.jpg",
+    description: "Güzel bir film",
+    is_active: true,
+    is_new: false,
+  },
+  {
+    id: 3,
+    title: "The codes of war",
+    image: "3.jpg",
+    description: "Güzel bir film",
+    is_active: true,
+    is_new: false,
+  },
+  {
+    id: 4,
+    title: "Moana 2",
+    image: "4.jpg",
+    description: "Güzel bir film",
+    is_active: true,
+    is_new: true,
+  },
+  {
+    id: 5,
+    title: "Counterstrike",
+    image: "5.jpg",
+    description: "Güzel bir film",
+    is_active: true,
+    is_new: true,
+  },
+];

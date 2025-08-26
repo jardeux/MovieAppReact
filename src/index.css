@@ -1,0 +1,36 @@
+.movie-title {
+  border: 1px solid green;
+  padding: 10px;
+}
+.img-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#home {
+  background-image: url("https://image.tmdb.org/t/p/original//mYZYVrQ2ghU3m79q7byeLzNXo1M.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  position: relative;
+}
+
+footer .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.placeholder-light::placeholder {
+  color: black !important;
+  opacity: 0.7; /* istersen hafif transparan */
+}
+
+/* Dark tema için */
+.placeholder-dark::placeholder {
+  color: white !important;
+  opacity: 0.7;
+}
