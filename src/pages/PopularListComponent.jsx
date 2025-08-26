@@ -13,8 +13,7 @@ const PopularListComponent = ({ type }) => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  const {theme} = useContext(ThemeContext);
-
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     async function GetComponent() {
@@ -41,7 +40,7 @@ const PopularListComponent = ({ type }) => {
           setItems(data.results);
         }
         window.scrollTo(0, 0);
-        setTotalPages(data.total_pages);
+        setTotalPages(Math.min(data.total_pages, 100));
         setErrorMessage("");
       } catch (error) {
         setErrorMessage(error.message);
@@ -54,9 +53,17 @@ const PopularListComponent = ({ type }) => {
   return (
     <div className="my-3 container">
       <div className="card">
-        <div className={`card-header bg-${theme} d-flex align-items-center gap-2`}>
-          <i className={`bi bi-film text-${theme === "dark" ? "light" : "dark"}`}></i>
-          <h2 className={`title text-${theme === "dark" ? "light" : "dark"} h3 mb-0`}>
+        <div
+          className={`card-header bg-${theme} d-flex align-items-center gap-2`}
+        >
+          <i
+            className={`bi bi-film text-${theme === "dark" ? "light" : "dark"}`}
+          ></i>
+          <h2
+            className={`title text-${
+              theme === "dark" ? "light" : "dark"
+            } h3 mb-0`}
+          >
             Popüler {type === "movie" ? "Filmler" : "Diziler"} Listesi
           </h2>
         </div>

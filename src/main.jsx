@@ -14,3 +14,7 @@ createRoot(document.getElementById("root")).render(
     </UserContextProvider>
   </ThemeProvider>
 );
+
+// Bu dosya, React uygulamasının başlangıç noktasıdır. Burada gerekli kütüphaneler ve stiller içe aktarılır.
+// ThemeProvider ve UserContextProvider ile uygulamanın genel tema ve kullanıcı yönetimi sağlanır.
+// createRoot ile React uygulaması "root" id'li HTML elementine render edilir.

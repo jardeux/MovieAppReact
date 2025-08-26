@@ -18,7 +18,7 @@ const SearchResults = () => {
 
   const query = searchParams.get("query");
   console.log("query:", query);
-
+  console.log("movies:", movies);
   useEffect(() => {
     async function GetMovies() {
       try {

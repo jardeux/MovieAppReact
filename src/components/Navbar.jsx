@@ -42,13 +42,18 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/popular-tv">
+                Popüler Diziler
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/upcoming">
                 Yakında Vizyonda
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/popular-tv">
-                Popüler Diziler
+              <NavLink className="nav-link" to="/popular-people">
+                Popüler Kişiler
               </NavLink>
             </li>
           </ul>

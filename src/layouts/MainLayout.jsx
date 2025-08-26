@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const MainLayout = () => {
-  const {theme} = useContext(ThemeContext);
-  
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className={`bg-${theme}`}>
       <Navbar />

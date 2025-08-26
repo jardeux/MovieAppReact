@@ -29,7 +29,7 @@ export default function SearchForm() {
           theme === "dark" ? "light" : "dark"
         } placeholder-${theme}`}
         type="search"
-        placeholder="Film veya dizi Ara"
+        placeholder="Film,dizi,oyuncu ara"
         aria-label="Search"
         onChange={(e) => setSearchQuery(e.target.value)}
         value={searchQuery}
