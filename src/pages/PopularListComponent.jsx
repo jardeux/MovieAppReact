@@ -68,7 +68,7 @@ const PopularListComponent = ({ type }) => {
           </h2>
         </div>
         <div className={`card-body bg-${theme}`}>
-          <div className="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-4">
+          <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
             {items.length === 0 && <p>Film veya dizi bulunamadı.</p>}
             {items.map((item, index) => (
               <Movie key={index} movieObj={item} type={type} />

@@ -54,7 +54,7 @@ const UpcomingPages = () => {
           <h2 className={`title h3 mb-0 text-${theme === "dark" ? "light" : "dark"}`}>Yakında Vizyonda Listesi</h2>
         </div>
         <div className={`card-body bg-${theme}`}>
-          <div className="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-4">
+          <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
             {upcomingMovies.length === 0 && <p>Film bulunamadı.</p>}
             {upcomingMovies.map((movie, index) => (
               <UpcomingMovies key={index} movieObj={movie} />
