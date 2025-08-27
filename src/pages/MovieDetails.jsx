@@ -125,7 +125,7 @@ const MovieDetails = ({ type }) => {
                     ) : (
                       <button
                         className="badge bg-danger fs-6 ms-2 pointer"
-                        onClick={() => addToWatchlist(movie)}
+                        onClick={() => addToWatchlist(movie, type)}
                       >
                         <i className="bi bi-heart"></i>
                       </button>

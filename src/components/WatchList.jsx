@@ -3,7 +3,7 @@ import { ThemeContext } from "../contexts/ThemeContext.jsx";
 import WatchListMovie from "./WatchListMovie.jsx";
 
 export default function WatchList({ movies, title, removeFromWatchlist }) {
-  console.log(movies.length);
+  console.log(movies);
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -21,7 +21,8 @@ export default function WatchList({ movies, title, removeFromWatchlist }) {
             <div className="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-2">
               {movies.map((movie, index) => (
                 <WatchListMovie
-                  key={index}
+                  
+                key={index}
                   movieObj={movie}
                   removeFromWatchlist={removeFromWatchlist}
                 />

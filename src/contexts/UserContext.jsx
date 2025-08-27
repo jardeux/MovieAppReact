@@ -11,12 +11,15 @@ export default function UserContextProvider({ children }) {
     localStorage.setItem("watchlist", JSON.stringify(watchList));
   }, [watchList]);
 
-  function addToWatchlist(movie) {
-    const isAddedToList = watchList.map((i) => i.id).includes(movie.id);
+  function addToWatchlist(movie, type) {
+    const withType = { ...movie, data_type: type };
+    const isAddedToList = watchList.some(
+      (i) => i.id === withType.id && i.media_type === withType.media_type
+    );
+
     if (!isAddedToList) {
-      setWatchList((e) => [...e, movie]);
+      setWatchList((e) => [...e, withType]);
     }
-    return isAddedToList;
   }
 
   function removeFromWatchlist(movie) {
