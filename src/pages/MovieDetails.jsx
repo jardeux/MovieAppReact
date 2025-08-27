@@ -8,7 +8,6 @@ import { ThemeContext } from "../contexts/ThemeContext";
 import { UserContext } from "../contexts/UserContext";
 const api_key = import.meta.env.VITE_TMDB_API_KEY;
 const language = "tr-TR";
-const page = 1;
 const apiUrl = "https://api.themoviedb.org/3";
 const MovieDetails = ({ type }) => {
   const [errorMessage, setErrorMessage] = useState("");
