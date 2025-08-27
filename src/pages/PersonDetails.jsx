@@ -4,7 +4,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 import Movie from "../components/Movie";
 import PersonMovie from "../components/PersonMovie";
 
-const API_KEY = "b0aefd2c1a775619f9d05eaebc2f45b1"; // Replace with your TMDB API key
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // Replace with your TMDB API key
 
 const PersonDetails = () => {
   const { id } = useParams();

@@ -6,7 +6,7 @@ import ActorCard from "../components/ActorCard";
 import SimilarComponents from "./SimilarComponents";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { UserContext } from "../contexts/UserContext";
-const api_key = "b0aefd2c1a775619f9d05eaebc2f45b1";
+const api_key = import.meta.env.VITE_TMDB_API_KEY;
 const language = "tr-TR";
 const page = 1;
 const apiUrl = "https://api.themoviedb.org/3";

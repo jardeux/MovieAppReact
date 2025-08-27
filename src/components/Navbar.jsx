@@ -71,7 +71,7 @@ export default function Navbar() {
               </span>
             </Link>
             <ThemeChange />
-            <div className="ms-2 d-flex gap-2">
+            {/* <div className="ms-2 d-flex gap-2">
               <Link
                 to="/login"
                 className={`btn btn-${
@@ -88,7 +88,7 @@ export default function Navbar() {
               >
                 Kayıt Ol
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

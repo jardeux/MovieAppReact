@@ -4,7 +4,7 @@ import Movie from "../components/Movie";
 import { useSearchParams } from "react-router";
 import Pagination from "../components/Pagination";
 import { ThemeContext } from "../contexts/ThemeContext";
-const api_key = "b0aefd2c1a775619f9d05eaebc2f45b1";
+const api_key = import.meta.env.VITE_TMDB_API_KEY;
 const language = "tr-TR";
 const page = 1;
 const apiUrl = "https://api.themoviedb.org/3";
