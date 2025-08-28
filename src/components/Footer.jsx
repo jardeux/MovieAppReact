@@ -3,43 +3,67 @@ import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function Footer() {
   const decorationNone = { textDecoration: "none" };
-  const {theme} = useContext(ThemeContext);
-  
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <footer className={`bg-${theme} text-${theme === "dark" ? "light" : "dark"} pt-5 pb-4`}>
+    <footer
+      className={`bg-${theme} text-${
+        theme === "dark" ? "light" : "dark"
+      } pt-5 pb-4`}
+    >
       <div className="text-center text-md-left">
         <div className="row text-center text-md-left">
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">
-              MovieApp
+              CineUG+
             </h5>
             <p>
-              MovieApp, kullanıcılarına en iyi film deneyimini sunmayı
-              hedefleyen bir platformdur.
+              CineUG+, kullanıcılarına en iyi film deneyimini sunmayı hedefleyen
+              bir platformdur.
             </p>
           </div>
 
-          <div className={`col-md-3 col-lg-2 text-${theme === "dark" ? "light" : "dark"} col-xl-2 mx-auto mt-3`}>
+          <div
+            className={`col-md-3 col-lg-2 text-${
+              theme === "dark" ? "light" : "dark"
+            } col-xl-2 mx-auto mt-3`}
+          >
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">
               Faydalı Linkler
             </h5>
             <p>
-              <a href="#" className={`text-${theme === "dark" ? "light" : "dark"}`} style={decorationNone}>
+              <a
+                href="#"
+                className={`text-${theme === "dark" ? "light" : "dark"}`}
+                style={decorationNone}
+              >
                 Hesabım
               </a>
             </p>
             <p>
-              <a href="#" className={`text-${theme === "dark" ? "light" : "dark"}`} style={decorationNone}>
+              <a
+                href="#"
+                className={`text-${theme === "dark" ? "light" : "dark"}`}
+                style={decorationNone}
+              >
                 Yardım
               </a>
             </p>
             <p>
-              <a href="#" className={`text-${theme === "dark" ? "light" : "dark"}`} style={decorationNone}>
+              <a
+                href="#"
+                className={`text-${theme === "dark" ? "light" : "dark"}`}
+                style={decorationNone}
+              >
                 Gizlilik Politikası
               </a>
             </p>
             <p>
-              <a href="#" className={`text-${theme === "dark" ? "light" : "dark"}`} style={decorationNone}>
+              <a
+                href="#"
+                className={`text-${theme === "dark" ? "light" : "dark"}`}
+                style={decorationNone}
+              >
                 İletişim
               </a>
             </p>
@@ -53,13 +77,13 @@ export default function Footer() {
               <i className="fas fa-home mr-3"></i> İstanbul, Türkiye
             </p>
             <p>
-              <i className="fas fa-envelope mr-3"></i> info@movieapp.com
+              <i className="fas fa-envelope mr-3"></i> j4rdeux@gmail.com
             </p>
             <p>
-              <i className="fas fa-phone mr-3"></i> +90 555 123 45 67
+              <i className="fas fa-phone mr-3"></i> +90 000 000 00 00
             </p>
             <p>
-              <i className="fas fa-print mr-3"></i> +01 234 567 89
+              <i className="fas fa-print mr-3"></i> +00 00 00 00
             </p>
           </div>
         </div>
@@ -71,7 +95,7 @@ export default function Footer() {
             <p className="text-md-left text-center">
               Telif Hakkı ©2025 Tüm Hakları Saklıdır
               <a href="#" style={decorationNone}>
-                <strong className="text-warning">MovieApp</strong>
+                <strong className="text-warning">CineUG+ - Umut Şen</strong>
               </a>
             </p>
           </div>
@@ -81,17 +105,21 @@ export default function Footer() {
               <ul className="list-unstyled list-inline">
                 <li className="list-inline-item">
                   <a
-                    href="#"
-                    className={`btn-floating btn-sm text-${theme === "dark" ? "light" : "dark"}`}
+                    href="https://github.com/jardeux"
+                    className={`btn-floating btn-sm text-${
+                      theme === "dark" ? "light" : "dark"
+                    }`}
                     style={{ fontSize: "23px" }}
                   >
-                    <i className="bi bi-facebook"></i>
+                    <i className="bi bi-github"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a
                     href="#"
-                    className={`btn-floating btn-sm text-${theme === "dark" ? "light" : "dark"}`}
+                    className={`btn-floating btn-sm text-${
+                      theme === "dark" ? "light" : "dark"
+                    }`}
                     style={{ fontSize: "23px" }}
                   >
                     <i className="bi bi-twitter"></i>
@@ -99,8 +127,10 @@ export default function Footer() {
                 </li>
                 <li className="list-inline-item">
                   <a
-                    href="#"
-                    className={`btn-floating btn-sm text-${theme === "dark" ? "light" : "dark"}`}
+                    href="https://www.linkedin.com/in/umut-%C5%9Fen-6932b62b2/"
+                    className={`btn-floating btn-sm text-${
+                      theme === "dark" ? "light" : "dark"
+                    }`}
                     style={{ fontSize: "23px" }}
                   >
                     <i className="bi bi-linkedin"></i>
@@ -109,7 +139,9 @@ export default function Footer() {
                 <li className="list-inline-item">
                   <a
                     href="#"
-                    className={`btn-floating btn-sm text-${theme === "dark" ? "light" : "dark"}`}
+                    className={`btn-floating btn-sm text-${
+                      theme === "dark" ? "light" : "dark"
+                    }`}
                     style={{ fontSize: "23px" }}
                   >
                     <i className="bi bi-instagram"></i>
