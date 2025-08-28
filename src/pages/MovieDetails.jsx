@@ -6,6 +6,7 @@ import ActorCard from "../components/ActorCard";
 import SimilarComponents from "./SimilarComponents";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { UserContext } from "../contexts/UserContext";
+import ReviewsComponent from "../components/ReviewsComponent";
 const api_key = import.meta.env.VITE_TMDB_API_KEY;
 const language = "tr-TR";
 const apiUrl = "https://api.themoviedb.org/3";
@@ -195,6 +196,7 @@ const MovieDetails = ({ type }) => {
             </div>
           </div>
         </div>
+        <ReviewsComponent id={id} type={type} />
         <SimilarComponents movieId={movie.id} type={type} />
       </>
     )
